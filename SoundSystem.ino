@@ -7,13 +7,13 @@ int Speaker1 = 13;
 int HertzModule = 1;
 int value = 0;
 int Plus = 2;
-int Moins = 3;
-long Ecart = 0;
+int Moins = 4;
+int Ecart = 0;
 
 void setup() {
   Serial.begin(9600);
   pinMode(13, OUTPUT);
-  pinMode(3, INPUT);
+  pinMode(4, INPUT);
   pinMode(2, INPUT);
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
@@ -21,22 +21,21 @@ void setup() {
 }
 
 void loop() {
-  if ( digitalRead(Plus) == HIGH) {
-    Ecart = Ecart + 10;
-    Serial.println(Ecart);
-  } 
-  if ( digitalRead(Moins) == HIGH ) {
-    Ecart = Ecart - 10;
-    Serial.println(Ecart);
-  }
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
   Serial.println("l'Ecart est de ");
   Serial.println(Ecart);
   lcd.setCursor(0, 0);
   value = analogRead(HertzModule);
-  tone(Speaker1, value);
-  delay(Ecart);
+
+  if (Ecart > 0 ){
+    tone(Speaker1, value);
+    delay(Ecart);
+    noTone(Speaker1);
+    delay(Ecart);
+  } else { 
+    tone(Speaker1, value);
+  }
   // print the number of seconds since reset:
   lcd.print(value);
   lcd.print(" Hertz");
@@ -44,5 +43,10 @@ void loop() {
   lcd.print("Ecart de ");
   lcd.print(Ecart);
   lcd.print("ms");
-
+  if ( digitalRead(Plus) == 1) {
+    Ecart = Ecart + 20;
+  } 
+  if ( digitalRead(Moins) == 1 && Ecart > 0) {
+    Ecart = Ecart - 20;
+  }
 }
