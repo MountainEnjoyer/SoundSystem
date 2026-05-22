@@ -1,0 +1,118 @@
+{
+  "uuid": "f981d221c8cf4875b4c531bcaa9753c5",
+  "path": "Offline/SoundSystem%20version%200.0.1",
+  "name": "SoundSystem version 0.0.1",
+  "content": "",
+  "created_at": "2026-05-22 15:47:56",
+  "updated_at": "2026-05-22 15:52:11",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "72bb50c567a2c073c07c5a9c07118bec",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7e7b66667b6948bcbfd7dab75773c451": 1,
+        "66d9117f0a1e4302bedc97adbe42cf65": 2,
+        "74fb8abe390746278c93981a05604b3a": 2,
+        "31b9b16199ad45a4925fcedea33d5973": 2,
+        "36058b480be24802a9bb6ecfdac9a2e8": 1,
+        "b111303a693348429672e96df577fac8": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Switch",
+          2,
+          "DIP SWITCH 6 SWITCHES",
+          "DIP1,DIP2",
+          {
+            "Manufacturer Part": "DIP switchEI-08",
+            "Manufacturer": "DIP",
+            "Supplier": "",
+            "Supplier Part": "C90019"
+          }
+        ],
+        [
+          "LMB162ADC NO SOLDERMASK",
+          1,
+          "LCD1602",
+          "LCD1",
+          {
+            "Manufacturer Part": "LMB162ADC",
+            "Manufacturer": "TOPWAY",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9741"
+          }
+        ],
+        [
+          "10K",
+          2,
+          "POT-10K-POTENTIOMETER",
+          "R1,R2",
+          {
+            "Manufacturer Part": "Potentiometer WH160-1-104",
+            "Manufacturer": "JML",
+            "Supplier": "LCSC",
+            "Supplier Part": "C61836"
+          }
+        ],
+        [
+          "10kΩ",
+          2,
+          "FOOTPRINT--XX--RESISTOR-1/4W-10K-1-PERCENT",
+          "R3,R4",
+          {
+            "Manufacturer Part": "MF1/4W-10KΩ±1% T",
+            "Manufacturer": "CCO(千志电子)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C119347"
+          }
+        ],
+        [
+          "speaker",
+          1,
+          "SPEAKER",
+          "U1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "ARDUINO_MEGA_2560 COPY",
+          1,
+          "TWIX_MEGA_PCB____ARDUINO-MEGA2560-FOOTPRINT_",
+          "U2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1779457931,
+      "createTime": 1779457677,
+      "histories": [],
+      "created_at": "2026-05-22 15:47:57",
+      "updated_at": "2026-05-22 15:52:11"
+    }
+  ],
+  "sort": [],
+  "title": "SoundSystem version 0.0.1",
+  "foldername": "SoundSystem version 0.0.1",
+  "schfilename": "SoundSystem version 0.0.1.json",
+  "schfilemtime": 1779457931268
+}
