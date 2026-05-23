@@ -6,4 +6,7 @@ Here lies the code and the schematics of my prototype of a Analogic Sound System
 - The Program writed in C++ in the arduino IDE.
 - The schematic of the apropriate version.
 
+### EasyEDA Schematic
+![Schematic](/Schematic.png)
+
 This Project has been a lot of fun to make and I plan to continue extending it's capacity by adding a RotaryEncoder Module.
