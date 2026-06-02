@@ -33,7 +33,7 @@ void loop() {
   freq4 = map(analogRead(A7), 0, 1023, 0, 1000);
 
 
-  if(speed1 < 40 && speed2 < 40 && speed3 < 40 && speed4 < 40) {
+  if(speed1 < 20 && speed2 < 20 && speed3 < 20 && speed4 < 20) {
     noTone(Speaker);
   }
   if ( speed1 > 40) {
