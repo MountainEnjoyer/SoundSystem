@@ -19,15 +19,15 @@ void setup() {
 
 void loop() {
   //freq
-  freq1 = map(analogRead(A1), 0, 1023, 30, 800);
-  freq2 = map(analogRead(A2), 0, 1023, 30, 800);  
-  freq3 = map(analogRead(A3), 0, 1023, 30, 800);
-  freq4 = map(analogRead(A4), 0, 1023, 30, 800);
-  freq5 = map(analogRead(A5), 0, 1023, 30, 800);
-  freq6 = map(analogRead(A6), 0, 1023, 30, 800);
-  freq7 = map(analogRead(A7), 0, 1023, 30, 800);
+  freq1 = map(analogRead(A1), 0, 1023, 0, 1000);
+  freq2 = map(analogRead(A2), 0, 1023, 0, 1000);  
+  freq3 = map(analogRead(A3), 0, 1023, 0, 1000);
+  freq4 = map(analogRead(A4), 0, 1023, 0, 1000);
+  freq5 = map(analogRead(A5), 0, 1023, 0, 1000);
+  freq6 = map(analogRead(A6), 0, 1023, 0, 1000);
+  freq7 = map(analogRead(A7), 0, 1023, 0, 1000);
   //bpm
-  speed = map(analogRead(A0), 0, 1023, 0, 1000);
+  speed = map(analogRead(A0), 0, 1023, 0, 1000) / 7;
 
   tone(Speaker, freq1);
   delay(speed);
