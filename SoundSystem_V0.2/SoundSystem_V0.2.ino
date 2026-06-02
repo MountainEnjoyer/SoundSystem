@@ -27,21 +27,24 @@ void loop() {
   freq6 = map(analogRead(A6), 0, 1023, 0, 1000);
   freq7 = map(analogRead(A7), 0, 1023, 0, 1000);
   //bpm
-  speed = map(analogRead(A0), 0, 1023, 0, 1000) / 7;
+  speed = map(analogRead(A0), 0, 1023, 0, 1000);
 
+  if ( freq1 > 40) {
   tone(Speaker, freq1);
+  }
   delay(speed);
-  tone(Speaker, freq2);
-  delay(speed);
+  if ( freq3 > 40) {
   tone(Speaker, freq3);
-  delay(speed);
-  tone(Speaker, freq4);
-  delay(speed);
+  }
+  delay(freq2);
+  if ( freq5 > 40) {
   tone(Speaker, freq5);
-  delay(speed);
-  tone(Speaker, freq6);
-  delay(speed);
+  }
+  delay(freq4);
+    if ( freq5 > 40) {
   tone(Speaker, freq7);
-  delay(speed);
+  }
+  delay(freq6);
+
 
 }
