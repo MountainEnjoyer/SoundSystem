@@ -16,29 +16,30 @@ arduinoData = serial.Serial('com3', 9600)
 timer = pygame.time.Clock()
 fps = 60
 w, h = 3, 7
-data = [[0 for x in range(w)] for y in range(h)] 
 font = pygame.font.Font('freesansbold.ttf', 24)
 
 def parse_data(fulldata):
     print(fulldata)
-
     x = 0
-    y = 0
     lenght = len(fulldata) - 5
-
+    Data = ["","","","","","","",""]
+    temp = ""
     for i in range(2 , lenght):
+        print(fulldata[i])
     
+        if fulldata[i] != '-' and fulldata[i] != '/':
+            temp = temp + fulldata[i]
 
-        if fulldata[i] != '-' or fulldata[i] != '/':
-            data[x][y] = fulldata[i]
-            y =+ 1
-            print(data[x])
-        else :
+        elif fulldata[i] == '/' or fulldata[i] == '-':
+            i += 1
             x += 1
-            y=0
-        print(i)
-    print(data)
-    return(data)
+            Data[x] = temp
+            temp = ""
+        else:
+            pass
+
+    print(Data)
+    return(Data)
 
 def draw_screen(data):
 
@@ -56,7 +57,7 @@ def draw_screen(data):
             screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 540))
         elif i == 0:
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'SPEED', True, 'black'), (35 + 150 * i, 150))
+            screen.blit(font.render(f'{data[0]}', True, 'black'), (35 + 150 * i, 150))
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 290), 60)
             screen.blit(font.render(f'SPEED', True, 'black'), (35 + 150 * i, 280))
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 420), 60)
