@@ -1,0 +1,118 @@
+{
+  "uuid": "e789e9e03975b606c43176fa3907dd4d",
+  "path": "Offline/SoundSystem%20V0.0.1",
+  "name": "SoundSystem V0.0.1",
+  "content": "",
+  "created_at": "2026-05-23 08:53:07",
+  "updated_at": "2026-05-23 08:53:07",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "76011223605fd5783fa4cbf3b388155b",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7e7b66667b6948bcbfd7dab75773c451": 1,
+        "66d9117f0a1e4302bedc97adbe42cf65": 2,
+        "74fb8abe390746278c93981a05604b3a": 2,
+        "36058b480be24802a9bb6ecfdac9a2e8": 1,
+        "b111303a693348429672e96df577fac8": 1,
+        "6b1abc4eea01451bbbeaaaf9dd221d7b": 2
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "LMB162ADC NO SOLDERMASK",
+          1,
+          "LCD1602",
+          "LCD1",
+          {
+            "Manufacturer Part": "LMB162ADC",
+            "Manufacturer": "TOPWAY",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9741"
+          }
+        ],
+        [
+          "10K",
+          2,
+          "POT-10K-POTENTIOMETER",
+          "POTENTIOMETER1,POTENTIOMETER2",
+          {
+            "Manufacturer Part": "Potentiometer WH160-1-104",
+            "Manufacturer": "JML",
+            "Supplier": "LCSC",
+            "Supplier Part": "C61836"
+          }
+        ],
+        [
+          "10kΩ",
+          2,
+          "FOOTPRINT--XX--RESISTOR-1/4W-10K-1-PERCENT",
+          "R3,R4",
+          {
+            "Manufacturer Part": "MF1/4W-10KΩ±1% T",
+            "Manufacturer": "CCO(千志电子)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C119347"
+          }
+        ],
+        [
+          "SQUARE BUTTON",
+          2,
+          "SW-SMD_4P-L6.0-W6.0-P4.50-LS9.0-H7.3",
+          "SW1,SW2",
+          {
+            "Manufacturer Part": "HX-6x6x7.3-TP FT square button",
+            "Manufacturer": "hanxia(韩下)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C49234152"
+          }
+        ],
+        [
+          "SPEAKER",
+          1,
+          "SPEAKER",
+          "U1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "ARDUINO_MEGA_2560 COPY",
+          1,
+          "TWIX_MEGA_PCB____ARDUINO-MEGA2560-FOOTPRINT_",
+          "U2",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1779519187,
+      "createTime": 1779519187,
+      "histories": [],
+      "created_at": "2026-05-23 08:53:07",
+      "updated_at": "2026-05-23 08:53:07"
+    }
+  ],
+  "sort": [],
+  "title": "SoundSystem V0.0.1",
+  "foldername": "SoundSystem V0.0.1",
+  "schfilename": "SoundSystem V0.0.1.json",
+  "schfilemtime": 1779519187894
+}
