@@ -19,3 +19,4 @@ data = [0, 0, 0, 0, 0, 0, 0, 0]
 font = pygame.font.Font('freesansbold.ttf', 24)
 
 print(arduinoData)
+
