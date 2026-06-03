@@ -18,12 +18,17 @@ fps = 60
 data = [0, 0, 0, 0, 0, 0, 0, 0] 
 font = pygame.font.Font('freesansbold.ttf', 24)
 
+def parse_data(fulldata):
+
+    for i in len(fulldata):
+        print(fulldata[i])
+    
+
+    return(speed1, freq1, speed2, freq2, speed3, freq3, speed4, freq4)
 
 def draw_screen(ins):
 
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
-
-    print(ins[2:5])
 
     for i in range(2):
         if i == 1:
@@ -57,7 +62,7 @@ while run:
         pass
     dataPacket = arduinoData.readline()
     dataPacket = str(dataPacket)
-    draw_screen(dataPacket)
+    parse_data(draw_screen(dataPacket))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
