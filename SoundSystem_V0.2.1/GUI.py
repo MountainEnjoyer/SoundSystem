@@ -15,22 +15,29 @@ screen = pygame.display.set_mode([WIDTH, HEIGHT])
 arduinoData = serial.Serial('com3', 9600)
 timer = pygame.time.Clock()
 fps = 60
-data = [0, 0, 0, 0, 0, 0, 0, 0] 
+w, h = 3, 7
+data = [[0 for x in range(w)] for y in range(h)] 
 font = pygame.font.Font('freesansbold.ttf', 24)
 
 def parse_data(fulldata):
     print(fulldata)
 
     x = 0
+    y = 0
     lenght = len(fulldata) - 5
 
     for i in range(2 , lenght):
-        
-        print(fulldata[i])
-        data.append(fulldata[i])
-        x += 1
     
 
+        if fulldata[i] != '-' or fulldata[i] != '/':
+            data[x][y] = fulldata[i]
+            y =+ 1
+            print(data[x])
+        else :
+            x += 1
+            y=0
+        print(i)
+    print(data)
     return(data)
 
 def draw_screen(data):
