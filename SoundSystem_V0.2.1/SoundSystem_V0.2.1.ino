@@ -64,7 +64,7 @@ void loop() {
   }
   delay(speed4);
 
-  formatted_str = String(speed1) + '-' + String(freq1) + '/' + String(speed2) + '-' + String(freq2) + '/' + String(speed3) + '-' + String(freq3) + '/' + String(speed4) + '-' + String(freq4);
+  formatted_str = String(speed1) + '-' + String(freq1) + '/' + String(speed2) + '-' + String(freq2) + '/' + String(speed3) + '-' + String(freq3) + '/' + String(speed4) + '-' + String(freq4) + '/';
   Serial.println(formatted_str); 
 
 }

@@ -19,26 +19,23 @@ w, h = 3, 7
 font = pygame.font.Font('freesansbold.ttf', 24)
 
 def parse_data(fulldata):
-    print(fulldata)
     x = 0
     lenght = len(fulldata) - 5
     Data = ["","","","","","","",""]
     temp = ""
     for i in range(2 , lenght):
-        print(fulldata[i])
     
         if fulldata[i] != '-' and fulldata[i] != '/':
             temp = temp + fulldata[i]
 
         elif fulldata[i] == '/' or fulldata[i] == '-':
             i += 1
-            x += 1
             Data[x] = temp
+            if x<7:x += 1
             temp = ""
         else:
             pass
 
-    print(Data)
     return(Data)
 
 def draw_screen(data):
@@ -48,22 +45,22 @@ def draw_screen(data):
     for i in range(2):
         if i == 1:
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'{data[1]}', True, 'black'), (35 + 150 * i, 150))
+            screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150 * i, 150))
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 290), 60)
-            screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 280))
+            screen.blit(font.render(f'{data[3]}', True, 'black'), (55 + 150 * i, 280))
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 420), 60)
-            screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 410))
+            screen.blit(font.render(f'{data[5]}', True, 'black'), (55 + 150 * i, 410))
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 550), 60)
-            screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 540))
+            screen.blit(font.render(f'{data[7]}', True, 'black'), (55 + 150 * i, 540))
         elif i == 0:
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'{data[0]}', True, 'black'), (35 + 150 * i, 150))
+            screen.blit(font.render(f'{data[0]}', True, 'black'), (55 + 150 * i, 150))
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 290), 60)
-            screen.blit(font.render(f'SPEED', True, 'black'), (35 + 150 * i, 280))
+            screen.blit(font.render(f'{data[2]}', True, 'black'), (55 + 150 * i, 280))
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 420), 60)
-            screen.blit(font.render(f'SPEED', True, 'black'), (35 + 150 * i, 410))
+            screen.blit(font.render(f'{data[4]}', True, 'black'), (55 + 150 * i, 410))
             pygame.draw.circle(screen, 'white', (75 + 150 * i, 550), 60)
-            screen.blit(font.render(f'SPEED', True, 'black'), (35 + 150 * i, 540))
+            screen.blit(font.render(f'{data[6]}', True, 'black'), (55 + 150 * i, 540))
         screen.blit(font.render(f'SPEED', True, 'dark gray'), (35, 70))
         screen.blit(font.render(f'HERTZ', True, 'white'), (180, 70))
 
