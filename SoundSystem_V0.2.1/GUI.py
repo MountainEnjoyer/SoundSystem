@@ -19,21 +19,28 @@ data = [0, 0, 0, 0, 0, 0, 0, 0]
 font = pygame.font.Font('freesansbold.ttf', 24)
 
 def parse_data(fulldata):
+    print(fulldata)
 
-    for i in len(fulldata):
+    x = 0
+    lenght = len(fulldata) - 5
+
+    for i in range(2 , lenght):
+        
         print(fulldata[i])
+        data.append(fulldata[i])
+        x += 1
     
 
-    return(speed1, freq1, speed2, freq2, speed3, freq3, speed4, freq4)
+    return(data)
 
-def draw_screen(ins):
+def draw_screen(data):
 
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
 
     for i in range(2):
         if i == 1:
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 150))
+            screen.blit(font.render(f'{data[1]}', True, 'black'), (35 + 150 * i, 150))
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 290), 60)
             screen.blit(font.render(f'HERTZ', True, 'black'), (35 + 150 * i, 280))
             pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 420), 60)
@@ -62,7 +69,7 @@ while run:
         pass
     dataPacket = arduinoData.readline()
     dataPacket = str(dataPacket)
-    parse_data(draw_screen(dataPacket))
+    draw_screen(parse_data(dataPacket))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
