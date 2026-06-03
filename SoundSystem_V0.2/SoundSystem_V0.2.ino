@@ -37,19 +37,27 @@ void loop() {
     noTone(Speaker);
   }
   if ( speed1 > 40) {
-  tone(Speaker, freq1);
+    if ( freq1 > 40) {
+      tone(Speaker, freq1);
+    }
   }
   delay(speed1);
   if ( speed2 > 40) {
-  tone(Speaker, freq2);
+    if ( freq2 > 40) {
+      tone(Speaker, freq2);
+    }
   }
   delay(speed2);
   if ( speed3 > 40) {
-  tone(Speaker, freq3);
+    if ( freq3 > 40) {
+      tone(Speaker, freq3);
+    }
   }
   delay(speed3);
-    if ( speed4 > 40) {
-  tone(Speaker, freq4);
+  if ( speed4 > 40) {
+    if ( freq4 > 40) {
+      tone(Speaker, freq4);
+    }
   }
   delay(speed4);
 
