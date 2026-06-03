@@ -23,17 +23,17 @@ void setup() {
 
 void loop() {
   //bpm
-  speed1 = map(analogRead(A0), 0, 1023, 0, 1000);
-  speed2 = map(analogRead(A2), 0, 1023, 0, 1000);
-  speed3 = map(analogRead(A4), 0, 1023, 0, 1000);  
-  speed4 = map(analogRead(A6), 0, 1023, 0, 1000);
+  speed1 = map(analogRead(A0), 0, 1023, 0, 999);
+  speed2 = map(analogRead(A2), 0, 1023, 0, 999);
+  speed3 = map(analogRead(A4), 0, 1023, 0, 999);  
+  speed4 = map(analogRead(A6), 0, 1023, 0, 999);
 
 
   //freq
-  freq1 = map(analogRead(A1), 0, 1023, 0, 1000);
-  freq2 = map(analogRead(A3), 0, 1023, 0, 1000);
-  freq3 = map(analogRead(A5), 0, 1023, 0, 1000);
-  freq4 = map(analogRead(A7), 0, 1023, 0, 1000);
+  freq1 = map(analogRead(A1), 0, 1023, 0, 999);
+  freq2 = map(analogRead(A3), 0, 1023, 0, 999);
+  freq3 = map(analogRead(A5), 0, 1023, 0, 999);
+  freq4 = map(analogRead(A7), 0, 1023, 0, 999);
 
 
   if(speed1 < 20 && speed2 < 20 && speed3 < 20 && speed4 < 20) {
