@@ -17,3 +17,5 @@ timer = pygame.time.Clock()
 fps = 60
 data = [0, 0, 0, 0, 0, 0, 0, 0] 
 font = pygame.font.Font('freesansbold.ttf', 24)
+
+print(arduinoData)
