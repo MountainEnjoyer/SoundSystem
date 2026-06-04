@@ -10,7 +10,10 @@ pygame.init()
 
 WIDTH = 300
 HEIGHT = 620
+icon = pygame.image.load('icon.png') 
+pygame.display.set_icon(icon)
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
+pygame.display.set_caption('MySynth') 
 
 arduinoData = serial.Serial('com3', 9600)
 timer = pygame.time.Clock()

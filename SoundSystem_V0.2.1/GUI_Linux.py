@@ -11,8 +11,10 @@ pygame.init()
 WIDTH = 300
 HEIGHT = 620
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
-#icon = pygame.image.load('icon.png')
-#pygame.display.set_icon(icon)
+icon = pygame.image.load('icon.png') 
+pygame.display.set_icon(icon)
+screen = pygame.display.set_mode([WIDTH, HEIGHT])
+pygame.display.set_caption('MySynth') 
 
 arduinoData = serial.Serial('/dev/ttyACM1', 9600)
 timer = pygame.time.Clock()
