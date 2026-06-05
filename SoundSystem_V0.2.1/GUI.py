@@ -57,7 +57,7 @@ def draw_screen(data):
     pygame.draw.rect(screen, 'white', (320, 175,650, 2))
     pygame.draw.rect(screen, 'white', (320, 225, 650, 2))
     pygame.draw.rect(screen, 'white', (320, 275, 650, 2))
-    screen.blit(sol, (250, 50))
+    screen.blit(sol, (220, 0))
 
     # bass staff
     pygame.draw.rect(screen, 'white', (320, 375, 650, 2))
@@ -66,17 +66,17 @@ def draw_screen(data):
     pygame.draw.rect(screen, 'white', (320, 525, 650, 2))
     pygame.draw.rect(screen, 'white', (320, 575, 650, 2))
 
-    screen.blit(fa, (300, 360))
+    screen.blit(fa, (325, 375))
 
     # note
     note1 = re.sub('\r','\n',data[1]).strip()
     note2 = re.sub('\r','\n',data[3]).strip()
     note3 = re.sub('\r','\n',data[5]).strip()
     note4 = re.sub('\r','\n',data[7]).strip()
-    pygame.draw.circle(screen, 'dark gray', (575, (60000 / float(note1))), 15)
-    pygame.draw.circle(screen, 'dark gray', (675, (60000 / float(note2))), 15)
-    pygame.draw.circle(screen, 'dark gray', (775, (60000 / float(note3))), 15)
-    pygame.draw.circle(screen, 'dark gray', (875, (60000 / float(note4))), 15)
+    pygame.draw.circle(screen, 'white', (575, (60000 / float(note1))), 20)
+    pygame.draw.circle(screen, 'white', (675, (60000 / float(note2))), 20)
+    pygame.draw.circle(screen, 'white', (775, (60000 / float(note3))), 20)
+    pygame.draw.circle(screen, 'white', (875, (60000 / float(note4))), 20)
 
     pygame.draw.circle(screen, 'dark gray', (75 + 150, 160), 60)
     screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150, 150))
