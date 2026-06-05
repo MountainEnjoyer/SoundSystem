@@ -8,10 +8,12 @@ import pygame # pip install pygame
 
 pygame.init()
 
-WIDTH = 300
+WIDTH = 1000
 HEIGHT = 620
 icon = pygame.image.load('icon.png') 
 pygame.display.set_icon(icon)
+myimage = pygame.image.load("cle_sol.png")
+imagerect = myimage.get_rect()
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption('MySynth') 
 
@@ -44,28 +46,32 @@ def parse_data(fulldata):
 def draw_screen(data):
 
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
+    pygame.draw.rect(screen, 'white', (320, 200, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 260, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 320, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 380, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 440, 650, 2))
+    screen.blit(myimage, (145, 75))
 
-    for i in range(2):
-        if i == 1:
-            pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150 * i, 150))
-            pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 290), 60)
-            screen.blit(font.render(f'{data[3]}', True, 'black'), (55 + 150 * i, 280))
-            pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 420), 60)
-            screen.blit(font.render(f'{data[5]}', True, 'black'), (55 + 150 * i, 410))
-            pygame.draw.circle(screen, 'dark gray', (75 + 150 * i, 550), 60)
-            screen.blit(font.render(f'{data[7]}', True, 'black'), (55 + 150 * i, 540))
-        elif i == 0:
-            pygame.draw.circle(screen, 'white', (75 + 150 * i, 160), 60)
-            screen.blit(font.render(f'{data[0]}', True, 'black'), (55 + 150 * i, 150))
-            pygame.draw.circle(screen, 'white', (75 + 150 * i, 290), 60)
-            screen.blit(font.render(f'{data[2]}', True, 'black'), (55 + 150 * i, 280))
-            pygame.draw.circle(screen, 'white', (75 + 150 * i, 420), 60)
-            screen.blit(font.render(f'{data[4]}', True, 'black'), (55 + 150 * i, 410))
-            pygame.draw.circle(screen, 'white', (75 + 150 * i, 550), 60)
-            screen.blit(font.render(f'{data[6]}', True, 'black'), (55 + 150 * i, 540))
-        screen.blit(font.render(f'SPEED', True, 'dark gray'), (35, 70))
-        screen.blit(font.render(f'HERTZ', True, 'white'), (180, 70))
+    pygame.draw.circle(screen, 'dark gray', (75 + 150, 160), 60)
+    screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150, 150))
+    pygame.draw.circle(screen, 'dark gray', (75 + 150, 290), 60)
+    screen.blit(font.render(f'{data[3]}', True, 'black'), (55 + 150, 280))
+    pygame.draw.circle(screen, 'dark gray', (75 + 150, 420), 60)
+    screen.blit(font.render(f'{data[5]}', True, 'black'), (55 + 150, 410))
+    pygame.draw.circle(screen, 'dark gray', (75 + 150, 550), 60)
+    screen.blit(font.render(f'{data[7]}', True, 'black'), (55 + 150, 540))       
+    pygame.draw.circle(screen, 'white', (75 , 160), 60)
+    screen.blit(font.render(f'{data[0]}', True, 'black'), (55 , 150))
+    pygame.draw.circle(screen, 'white', (75 , 290), 60)
+    screen.blit(font.render(f'{data[2]}', True, 'black'), (55 , 280))
+    pygame.draw.circle(screen, 'white', (75 , 420), 60)
+    screen.blit(font.render(f'{data[4]}', True, 'black'), (55 , 410))
+    pygame.draw.circle(screen, 'white', (75 , 550), 60)
+    screen.blit(font.render(f'{data[6]}', True, 'black'), (55 , 540))
+    screen.blit(font.render(f'SPEED', True, 'dark gray'), (35, 70))
+    screen.blit(font.render(f'HERTZ', True, 'white'), (180, 70))
+
 
 
 # main repeating loop where we check for new arduino data and display onto a GUI if we have good new data
