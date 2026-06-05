@@ -49,11 +49,7 @@ def parse_data(fulldata):
 def draw_screen(data):
     # title
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
-
-    # note1 = float(data[1].split()[])
-    # note2 = float(data[3].split()[1])
-    # note3 = float(data[5].split()[1])
-    # note4 = float(data[7].split()[1])
+    screen.blit(font.render(f'NOTES', True, 'red'), (630, 10))
 
     # first staff
     pygame.draw.rect(screen, 'white', (320, 75, 650, 2))
@@ -72,17 +68,15 @@ def draw_screen(data):
 
     screen.blit(fa, (300, 360))
 
-    # notes
-
+    # note
     note1 = re.sub('\r','\n',data[1]).strip()
     note2 = re.sub('\r','\n',data[3]).strip()
     note3 = re.sub('\r','\n',data[5]).strip()
     note4 = re.sub('\r','\n',data[7]).strip()
-    pygame.draw.circle(screen, 'dark gray', (550, (60000 / float(note1))), 15)
-    pygame.draw.circle(screen, 'dark gray', (650, (60000 / float(note2))), 15)
-    pygame.draw.circle(screen, 'dark gray', (750, (60000 / float(note3))), 15)
-    pygame.draw.circle(screen, 'dark gray', (850, (60000 / float(note4))), 15)
-
+    pygame.draw.circle(screen, 'dark gray', (575, (60000 / float(note1))), 15)
+    pygame.draw.circle(screen, 'dark gray', (675, (60000 / float(note2))), 15)
+    pygame.draw.circle(screen, 'dark gray', (775, (60000 / float(note3))), 15)
+    pygame.draw.circle(screen, 'dark gray', (875, (60000 / float(note4))), 15)
 
     pygame.draw.circle(screen, 'dark gray', (75 + 150, 160), 60)
     screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150, 150))
