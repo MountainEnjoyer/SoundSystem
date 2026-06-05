@@ -1,5 +1,7 @@
 import math
 import time
+import re
+
 
 from math import cos, sin
 
@@ -27,7 +29,7 @@ def parse_data(fulldata):
     x = 0
     lenght = len(fulldata) - 5
     Data = ["","","","","","","",""]
-    temp = ""
+    temp = ''
     for i in range(2 , lenght):
     
         if fulldata[i] != '-' and fulldata[i] != '/':
@@ -36,8 +38,9 @@ def parse_data(fulldata):
         elif fulldata[i] == '/' or fulldata[i] == '-':
             i += 1
             Data[x] = temp
+
             if x<7:x += 1
-            temp = ""
+            temp = ''
         else:
             pass
 
@@ -46,6 +49,11 @@ def parse_data(fulldata):
 def draw_screen(data):
     # title
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
+
+    # note1 = float(data[1].split()[])
+    # note2 = float(data[3].split()[1])
+    # note3 = float(data[5].split()[1])
+    # note4 = float(data[7].split()[1])
 
     # first staff
     pygame.draw.rect(screen, 'white', (320, 75, 650, 2))
@@ -64,10 +72,15 @@ def draw_screen(data):
     screen.blit(fa, (300, 360))
 
     # notes
-    pygame.draw.circle(screen, 'dark gray', (450, 160), 15)
-    pygame.draw.circle(screen, 'dark gray', (500, 290), 15)
-    pygame.draw.circle(screen, 'dark gray', (550, 420), 15)
-    pygame.draw.circle(screen, 'dark gray', (600, 550), 15)
+
+    note1 = re.sub('\r','\n',data[1]).strip()
+    note2 = re.sub('\r','\n',data[3]).strip()
+    note3 = re.sub('\r','\n',data[5]).strip()
+    note4 = re.sub('\r','\n',data[7]).strip()
+    pygame.draw.circle(screen, 'dark gray', (550, (float(note1) *6/10)), 15)
+    pygame.draw.circle(screen, 'dark gray', (650, (float(note2) * 6 / 10)), 15)
+    pygame.draw.circle(screen, 'dark gray', (750, (float(note3) * 6 / 10)), 15)
+    pygame.draw.circle(screen, 'dark gray', (850, (float(note4) * 6 / 10)), 15)
 
 
     pygame.draw.circle(screen, 'dark gray', (75 + 150, 160), 60)
