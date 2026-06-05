@@ -30,35 +30,35 @@ void loop() {
 
 
   //freq
-  freq1 = map(analogRead(A1), 0, 1023, 0, 999);
-  freq2 = map(analogRead(A3), 0, 1023, 0, 999);
-  freq3 = map(analogRead(A5), 0, 1023, 0, 999);
-  freq4 = map(analogRead(A7), 0, 1023, 0, 999);
+  freq1 = map(analogRead(A1), 0, 1023, 1, 999);
+  freq2 = map(analogRead(A3), 0, 1023, 1, 999);
+  freq3 = map(analogRead(A5), 0, 1023, 1, 999);
+  freq4 = map(analogRead(A7), 0, 1023, 1, 999);
 
 
   if (speed1 < 20 && speed2 < 20 && speed3 < 20 && speed4 < 20) {
     noTone(Speaker);
   }
-  if (speed1 > 40) {
-    if (freq1 > 40) {
+  if (speed1 > 20) {
+    if (freq1 > 20) {
       tone(Speaker, freq1);
     }
     delay(speed1);
   }
-  if (speed2 > 40) {
-    if (freq2 > 40) {
+  if (speed2 > 20) {
+    if (freq2 > 20) {
       tone(Speaker, freq2);
     }
     delay(speed2);
   }
-  if (speed3 > 40) {
-    if (freq3 > 40) {
+  if (speed3 > 20) {
+    if (freq3 > 20) {
       tone(Speaker, freq3);
     }
     delay(speed3);
   }
-  if (speed4 > 40) {
-    if (freq4 > 40) {
+  if (speed4 > 20) {
+    if (freq4 > 20) {
       tone(Speaker, freq4);
     }
     delay(speed4);
