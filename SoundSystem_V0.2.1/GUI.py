@@ -10,10 +10,10 @@ pygame.init()
 
 WIDTH = 1000
 HEIGHT = 620
-icon = pygame.image.load('icon.png') 
+icon = pygame.image.load('assets/icon.png') 
 pygame.display.set_icon(icon)
-myimage = pygame.image.load("cle_sol.png")
-imagerect = myimage.get_rect()
+sol = pygame.image.load("assets/clef_sol.png")
+fa = pygame.image.load("assets/clef_fa.png")
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
 pygame.display.set_caption('MySynth') 
 
@@ -44,14 +44,31 @@ def parse_data(fulldata):
     return(Data)
 
 def draw_screen(data):
-
+    # title
     screen.blit(font.render(f'SYNTHETISER', True, 'red'), (67, 10))
-    pygame.draw.rect(screen, 'white', (320, 200, 650, 2))
-    pygame.draw.rect(screen, 'white', (320, 260, 650, 2))
-    pygame.draw.rect(screen, 'white', (320, 320, 650, 2))
-    pygame.draw.rect(screen, 'white', (320, 380, 650, 2))
-    pygame.draw.rect(screen, 'white', (320, 440, 650, 2))
-    screen.blit(myimage, (145, 75))
+
+    # first staff
+    pygame.draw.rect(screen, 'white', (320, 75, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 125, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 175,650, 2))
+    pygame.draw.rect(screen, 'white', (320, 225, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 275, 650, 2))
+    screen.blit(sol, (250, 50))
+
+    # bass staff
+    pygame.draw.rect(screen, 'white', (320, 375, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 425, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 475, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 525, 650, 2))
+    pygame.draw.rect(screen, 'white', (320, 575, 650, 2))
+    screen.blit(fa, (300, 360))
+
+    # notes
+    pygame.draw.circle(screen, 'dark gray', (450, 160), 15)
+    pygame.draw.circle(screen, 'dark gray', (500, 290), 15)
+    pygame.draw.circle(screen, 'dark gray', (550, 420), 15)
+    pygame.draw.circle(screen, 'dark gray', (600, 550), 15)
+
 
     pygame.draw.circle(screen, 'dark gray', (75 + 150, 160), 60)
     screen.blit(font.render(f'{data[1]}', True, 'black'), (55 + 150, 150))
