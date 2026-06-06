@@ -4,7 +4,9 @@ Here lies the code and the schematics of my prototype of a Analogic Sound System
 
 ### Here is what you can find:
 - The Program writed in C++ in the arduino IDE.
+- The GUI written in Python depending on the version.
 - The schematic of the apropriate version.
+- And the ressources that helped me build the program 
 
 ### EasyEDA Schematic
 ![Schematic](/Schematic.png)
