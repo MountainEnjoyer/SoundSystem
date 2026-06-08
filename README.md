@@ -1,6 +1,10 @@
 # ARDUINO SOUND SYSTEM
 Welcome ! :wave: 
-Here lies the code and the schematics of my prototype of a Analogic Sound System whith an LCD Screen for instant feedback.
+Here lies the code and the schematics of an Analogic Sound System inspired prototype. For now it juste plays 4 notes without interval with the note's play time adjustable.
+
+It also has a GUI written in python to have visual feedback on the sounds played and a partition to show the notes for geater feedback.
+
+![Gui](/GUI.png)
 
 ### Here is what you can find:
 - The Program writed in C++ in the arduino IDE.
