@@ -4,7 +4,7 @@ Here lies the code and the schematics of an Analogic Sound System inspired proto
 
 It also has a GUI written in python to have visual feedback on the sounds played and a partition to show the notes for geater feedback.
 
-![Gui](/GUI.png)
+![Gui](/README_Assets/GUI.png)
 
 ### Here is what you can find:
 - The Program writed in C++ in the arduino IDE.
