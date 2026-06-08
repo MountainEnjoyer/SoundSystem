@@ -8,11 +8,12 @@ It also has a GUI written in python to have visual feedback on the sounds played
 
 ### Here is what you can find:
 - The Program writed in C++ in the arduino IDE.
-- The GUI written in Python depending on the version.
+- The GUI written in Python depending on the version. It requires 2 librairies imported at the beggining of the file.
 - The schematic of the apropriate version.
-- And the ressources that helped me build the program 
+- And the ressources that helped me build the program. 
 
 ### EasyEDA Schematic
-![Schematic](/Schematic.png)
+![Schematic](/SoundSystem_V0.2.1/Schematic.png)
+
 
 This Project has been a lot of fun to make and I plan to continue extending it's capacity by adding a RotaryEncoder Module.
