@@ -13,15 +13,18 @@ It also has a GUI written in python to have visual feedback on the sounds played
 - And the ressources that helped me build the program. 
 
 ### EasyEDA Schematic
-![Schematic](/SoundSystem_V0.2.1/Schematic.png)
 
 It uses 8 Potentiometer, the resistance does not matter as we just map the value based on the flow of Voltage.
+![Schematic](/SoundSystem_V0.2.1/Schematic.png)
+
 
 ## Prototyping
 
 I soldered the potentiometers in parallel for the speed's knobs and another for the note's knobs.
 I also used the shield provided by the beginner's kit to solder the 5V volt supply and the ground.
 
-#
+![Open Prototype](/README_Assets/Proto.jpg)
 
-This Project has been a lot of fun to make and I plan to continue extending it's capacity by adding a RotaryEncoder Module.
+# Final Word
+This Project is a lot of fun to make and a great practicing tool.
+I plan on making it bigger and seperating the code with interupts to memorize the notes their speed to add other notes to make it a fully functionnal instrument.
