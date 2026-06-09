@@ -6,7 +6,7 @@ It also has a GUI written in python to have visual feedback on the sounds played
 
 ![Gui](/README_Assets/GUI.png)
 
-### Here is what you can find:
+## Here is what you can find:
 - The Program writed in C++ in the arduino IDE.
 - The GUI written in Python depending on the version. It requires 2 librairies imported at the beggining of the file.
 - The schematic of the apropriate version.
